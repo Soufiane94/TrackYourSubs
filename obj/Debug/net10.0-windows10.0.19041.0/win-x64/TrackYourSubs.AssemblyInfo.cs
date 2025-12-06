@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrackYourSubs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+9e91671d38e33f8e0191219b3c0eeb204e206d01")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrackYourSubs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrackYourSubs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
