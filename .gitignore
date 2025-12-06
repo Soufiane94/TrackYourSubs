@@ -1,0 +1,42 @@
+# .gitignore
+
+# Build outputs
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.exe
+*.dll
+*.pdb
+
+# User files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.csproj.user
+*.vscode/
+
+# MAUI / Android specific
+*.apk
+*.aab
+*.ap_
+*.keystore
+*.DS_Store
+*.vs/
+platforms/
+*.nupkg
+*.nuspec
+
+# JetBrains / Visual Studio
+.vs/
+.idea/
+
+# Tools
+*.cache
+*.log
+*.db
