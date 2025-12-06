@@ -1,0 +1,38 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:TrackYourSubs.ViewModels"
+    x:Class="TrackYourSubs.Views.EditSubscriptionPage"
+    x:DataType="vm:EditSubscriptionViewModel"
+    xmlns:vmEnums="clr-namespace:TrackYourSubs.ViewModels"
+    Title="Subscription">
+
+  <ScrollView>
+    <VerticalStackLayout Padding="16" Spacing="12">
+
+      <Entry Placeholder="Name" Text="{Binding Name}" />
+
+      <HorizontalStackLayout Spacing="10">
+        <Entry Keyboard="Numeric" WidthRequest="140" Placeholder="Amount" Text="{Binding Amount}" />
+        <Entry WidthRequest="90" Placeholder="Currency" Text="{Binding Currency}" />
+      </HorizontalStackLayout>
+
+      <Picker Title="Frequency"
+              ItemsSource="{x:Static vmEnums:BillingFrequencyValues.All}"
+              SelectedItem="{Binding Frequency}" />
+      <!-- helper to bind enum values -->
+      <HorizontalStackLayout Spacing="10">
+  <Entry Keyboard="Numeric" WidthRequest="120" Placeholder="Every N" Text="{Binding IntervalCount}" />
+  <Label VerticalTextAlignment="Center" Text="interval(s)" />
+</HorizontalStackLayout>
+
+<DatePicker Date="{Binding NextBillingDate}" />
+
+<Editor Placeholder="Notes" AutoSize="TextChanges" HeightRequest="100" Text="{Binding Notes}" />
+
+<Button Text="Save" Command="{Binding SaveCommand}" />
+<Button Text="Delete" IsVisible="{Binding Id, Converter={StaticResource IntToBoolConverter}}"
+        Command="{Binding DeleteCommand}" TextColor="Red" />
+    </VerticalStackLayout>
+  </ScrollView>
+</ContentPage>
